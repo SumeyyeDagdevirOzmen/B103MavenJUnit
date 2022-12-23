@@ -8,9 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class C01_MavebIlkTest {
+public class C01_MavenIlkTest {
     public static void main(String[] args) {
 
         WebDriverManager.chromedriver().setup();
