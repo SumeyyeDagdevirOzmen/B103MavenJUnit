@@ -9,5 +9,8 @@
         <module name="com.B103Maven_Junit" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.B103Maven_Junit" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
