@@ -5,22 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3d73f30-aa87-4ef1-835c-189c8928acf9" name="Changes" comment="23/12/22">
-      <change afterPath="$PROJECT_DIR$/src/test/java/day04_Maven/P02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/day05_JUnit/Practice04.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/day05_JUnit/Practice05.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/day05_JUnit/Practice06.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/day06/C01_Dropdown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/day06/C02_DropdownReusable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_javafaker_javafaker_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_mifmif_generex_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dk_brics_automaton_automaton_1_11_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_android_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/day06/EditorPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/day06/HandleDropdown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/practice/P01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/practice/P02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/practice/P03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/practice/P04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/practice/P05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/practice/P06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/day06/EditorPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/day06/HandleDropdown.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/practice/P01.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/practice/P02.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/practice/P03.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/practice/P04.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/practice/P05.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.B103Maven_Junit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/com.B103Maven_Junit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/day04_Maven/Practice03.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/day04_Maven/Practice03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day05_JUnit/Practice06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day05_JUnit/Practice06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day06/C01_Dropdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day06/C01_Dropdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/day06/C02_DropdownReusable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day06/C02_DropdownReusable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/day05_JUnit/Practice06.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/day05_JUnit/Practice06.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/day06/C02_DropdownReusable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/day06/C02_DropdownReusable.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,94 +71,84 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.C01_Dropdown.getSelectedOptionsTest">
-    <configuration name="C01_Dropdown.getSelectedOptionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.P01">
+    <configuration name="P01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.P01" />
       <module name="com.B103Maven_Junit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day06.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day06" />
-      <option name="MAIN_CLASS_NAME" value="day06.C01_Dropdown" />
-      <option name="METHOD_NAME" value="getSelectedOptionsTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C01_Dropdown.printAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="P03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.P03" />
       <module name="com.B103Maven_Junit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day06.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day06" />
-      <option name="MAIN_CLASS_NAME" value="day06.C01_Dropdown" />
-      <option name="METHOD_NAME" value="printAllTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C01_Dropdown.selectByIndexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="P04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.P04" />
       <module name="com.B103Maven_Junit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day06.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day06" />
-      <option name="MAIN_CLASS_NAME" value="day06.C01_Dropdown" />
-      <option name="METHOD_NAME" value="selectByIndexTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C02_DropdownReusable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="P05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.B103Maven_Junit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day06.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day06" />
-      <option name="MAIN_CLASS_NAME" value="day06.C02_DropdownReusable" />
+      <option name="PACKAGE_NAME" value="practice" />
+      <option name="MAIN_CLASS_NAME" value="practice.P05" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C02_DropdownReusable" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="P05.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="com.B103Maven_Junit" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day06.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day06" />
-      <option name="MAIN_CLASS_NAME" value="day06.C02_DropdownReusable" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="PACKAGE_NAME" value="practice" />
+      <option name="MAIN_CLASS_NAME" value="practice.P05" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.C01_Dropdown.getSelectedOptionsTest" />
-        <item itemvalue="JUnit.C01_Dropdown.printAllTest" />
-        <item itemvalue="JUnit.C02_DropdownReusable" />
-        <item itemvalue="TestNG.C02_DropdownReusable" />
-        <item itemvalue="JUnit.C01_Dropdown.selectByIndexTest" />
+        <item itemvalue="Application.P01" />
+        <item itemvalue="JUnit.P05" />
+        <item itemvalue="JUnit.P05.test01" />
+        <item itemvalue="Application.P04" />
+        <item itemvalue="Application.P03" />
       </list>
     </recent_temporary>
   </component>

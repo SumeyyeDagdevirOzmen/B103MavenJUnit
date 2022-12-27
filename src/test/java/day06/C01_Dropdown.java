@@ -45,7 +45,7 @@ public class C01_Dropdown {
         WebElement ay = driver.findElement(By.xpath("//select[@id='month']"));
         Select ayDropdown = new Select(ay);
         ayDropdown.selectByValue("0");//option in value degeri ile secim yapilabilir. January seceneinin value si 0
-//        Gun secimi selectByVisibleTest
+//        Gun secimi selectByVisibleText
         WebElement gun = driver.findElement(By.id("day"));
         Select gunDropdown = new Select(gun);
         gunDropdown.selectByVisibleText("10");//CASE SENSITIVE -
