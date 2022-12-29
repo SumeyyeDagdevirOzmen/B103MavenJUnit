@@ -1,8 +1,12 @@
 package day07;
 
+<<<<<<< HEAD
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+=======
+import org.junit.Test;
+>>>>>>> origin/master
 import utilities.TestBase;
 
 public class C02_AlertsAccept extends TestBase {
@@ -18,6 +22,7 @@ public class C02_AlertsAccept extends TestBase {
 
      */
     @Test
+<<<<<<< HEAD
     public void acceptAlertTest() throws InterruptedException {
         // https://testcenter.techproeducation.com/index.php?page=javascript-alerts  adresine gidin.
         driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
@@ -41,3 +46,13 @@ public class C02_AlertsAccept extends TestBase {
 Alertleri nasil automate edersin? How to handle alerts in Selenium?
 Alertler Javascript ile olusur. Inspect edilemezler. Oncelikle alert'u switch etmemiz gerekir.
  */
+=======
+    public void acceptAlertTest() {
+
+        //        1. butona tıklayın,
+        //        uyarıdaki OK butonuna tıklayın
+        //        ve result mesajının
+        //       “You successfully clicked an alert” oldugunu test edin.
+    }
+}
+>>>>>>> origin/master
