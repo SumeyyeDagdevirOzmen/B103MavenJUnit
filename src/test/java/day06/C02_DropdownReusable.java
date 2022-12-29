@@ -33,7 +33,7 @@ public class C02_DropdownReusable {
 //        selectFromDropdown(driver.findElement(By.xpath("//select[@id='month']")), "January"); -> month January
 //        selectFromDropdown(driver.findElement(By.id("day")), "12"); -> Day 12
 //        Gonderilen dropdown elementin tum optionslari alinir
-      List<WebElement> options =dropdown.findElements(By.tagName("option"));
+      List<WebElement> options =dropdown.findElements(By.tagName("option"));//Tum option tagli elementleri aliyorum.
       for(WebElement eachOption : options){
           if(eachOption.getText().equals(secenek)){
               eachOption.click();
@@ -42,10 +42,14 @@ public class C02_DropdownReusable {
       }
     }
     @Test
-    public void selectFromDropdown(){
+    public void selectFromDropdown() throws InterruptedException {
         selectFromDropdown(driver.findElement(By.xpath("//select[@id='year']")), "2005");//2005 i secti
-        selectFromDropdown(driver.findElement(By.xpath("//select[@id='month']")),"February");
-        selectFromDropdown(driver.findElement(By.id("day")), "28");
+        Thread.sleep(2000);
+        selectFromDropdown(driver.findElement(By.xpath("//select[@id='month']")),"November");
+        Thread.sleep(2000);
+        selectFromDropdown(driver.findElement(By.id("day")), "10");
+        Thread.sleep(2000);
+        selectFromDropdown(driver.findElement(By.id("state")), "Texas");
 //        WebElement day =driver.findElement(By.id("day"));
 //        String day2 = day.getText();
 //
