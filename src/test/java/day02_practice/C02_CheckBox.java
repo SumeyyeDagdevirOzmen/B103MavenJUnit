@@ -39,13 +39,14 @@ public class C02_CheckBox {
     public void test02() {
         // https://demo.guru99.com/test/radio.html adresine gidin
         driver.get("https://demo.guru99.com/test/radio.html");
-        List<WebElement> rejectAll =driver.findElements(By.xpath("(//*[@class ='action-wrapper'])"));
-        for (WebElement element : rejectAll) {
-            System.out.println(element.getText());
-              if(element.getText().equals("rejectAll")){
-                  element.click();
-              }
-        }
+        driver.findElement(By.xpath("//*[text()='Accept All']")).click();
+//        List<WebElement> rejectAll =driver.findElements(By.xpath("(//*[@class ='action-wrapper'])"));
+//        for (WebElement element : rejectAll) {
+//            System.out.println(element.getText());
+//              if(element.getText().equals("rejectAll")){
+//                  element.click();
+//              }
+//        }
        // WebElement rejectButton =driver.findElement(By.xpath("(//*[@class='mat-focus-indicator okButton mat-raised-button mat-button-base'])[1]"));
       //  rejectButton.click();
         // checkbox elementlerini locate edin
