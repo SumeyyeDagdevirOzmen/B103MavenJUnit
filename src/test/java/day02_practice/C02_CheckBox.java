@@ -32,23 +32,16 @@ public class C02_CheckBox {
     }
     @After
     public void tearDown() {
-        //driver.close();
+        driver.close();
     }
 
     @Test
-    public void test02() {
+    public void test02() throws InterruptedException {
         // https://demo.guru99.com/test/radio.html adresine gidin
         driver.get("https://demo.guru99.com/test/radio.html");
-        driver.findElement(By.xpath("//*[text()='Accept All']")).click();
-//        List<WebElement> rejectAll =driver.findElements(By.xpath("(//*[@class ='action-wrapper'])"));
-//        for (WebElement element : rejectAll) {
-//            System.out.println(element.getText());
-//              if(element.getText().equals("rejectAll")){
-//                  element.click();
-//              }
-//        }
-       // WebElement rejectButton =driver.findElement(By.xpath("(//*[@class='mat-focus-indicator okButton mat-raised-button mat-button-base'])[1]"));
-      //  rejectButton.click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("(//div[@class='action-wrapper']//span)[1]")).click();
+
         // checkbox elementlerini locate edin
         WebElement checkBox1 = driver.findElement(By.id("vfb-6-0"));
         WebElement checkBox2 = driver.findElement(By.id("vfb-6-1"));

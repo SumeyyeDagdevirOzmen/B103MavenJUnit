@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public abstract class TestBase {
+public abstract class  TestBase {
     //TestBase i abstract yapmamizin sebebi bu sinifin objesini olustirmak istemiyorum.
     //TestBase testBase = new TestBase(); -> YAPILAMAZ
     //Amacim bu sinifi extend etmek ve icindeki hazir methodlari kullanmak.
@@ -33,4 +33,29 @@ public abstract class TestBase {
     public void tearDown() {
         driver.quit();
     }
+
+    //    MULTIPLE WINDOW
+    //1 parametre alir:gecis yapmak istedigim sayfanin title'i
+    //Ornek:
+    // driver.get("https://the-internet.herokuapp.com/windows");
+    // switchToWindow("New Window");
+    //switchToWindow("The Internet  ")
+    public static void switchToWindow(String targetTitle) {
+        String origin = driver.getWindowHandle();
+        for (String handle : driver.getWindowHandles()) {
+            driver.switchTo().window(handle);
+            if (driver.getTitle().equals(targetTitle)) {
+                return;//cik loop yapmayi birak break gibi.
+            }
+        }
+        driver.switchTo().window(origin);
+    }
 }
+
+
+/*
+public static void clickOutside() {
+    Actions action = new Actions(driver);
+    action.moveByOffset(0, 0).click().build().perform();
+}
+ */

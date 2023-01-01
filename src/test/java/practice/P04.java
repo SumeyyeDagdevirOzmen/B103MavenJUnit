@@ -51,3 +51,28 @@ public class P04 {
         driver.close();
     }
 }
+
+/*
+// http://the-internet.herokuapp.com/add_remove_elements/ adresine gidiniz
+        driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
+        // Add Element butonuna 100 defa basınız
+        WebElement addElement = driver.findElement(By.xpath("//button[text()='Add Element']"));
+        for (int i = 0; i < 100; i++) {
+            addElement.click();
+        }
+        // 100 defa basıldığını test ediniz
+        List<WebElement> deleteButton = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        Assert.assertEquals(100, deleteButton.size());
+        // 90 defa delete butonuna basınız
+        deleteButton.stream().skip(10).limit(90).forEach(t -> t.click());
+        // 90 defa basıldığını doğrulayınız
+        List<WebElement> kalanDeleteButtons = driver.findElements(By.xpath("//*[@onclick='deleteElement()']"));
+        int kalan = (int) kalanDeleteButtons.stream().count();
+        System.out.println(kalan);
+        Assert.assertEquals(10, kalan);
+
+        // Sayfayı kapatınız
+        driver.close();
+    }
+}
+ */
