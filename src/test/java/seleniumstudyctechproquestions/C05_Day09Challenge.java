@@ -1,4 +1,4 @@
-package team23;
+package seleniumstudyctechproquestions;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import utilities.TestBase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class C05CanHocaDay09Challenge extends TestBase {
+public class C05_Day09Challenge extends TestBase {
     @Test
     public void test01(){
 
@@ -20,12 +20,12 @@ public class C05CanHocaDay09Challenge extends TestBase {
         driver.switchTo().frame(iframe);
         driver.findElement(By.xpath("//span[text()='Accept All']")).click();
         //       ilk pencereyi al
-       String ilkPencere = driver.getWindowHandle();
+        String ilkPencere = driver.getWindowHandle();
         //       "Click Here" butonuna tıklayın
-         driver.findElement(By.xpath("//a[.='Click Here']")).click();
-         String url=driver.getCurrentUrl();
+        driver.findElement(By.xpath("//a[.='Click Here']")).click();
+        String url=driver.getCurrentUrl();
         System.out.println(url);
-         String windowHandle2 =driver.getWindowHandle();
+        String windowHandle2 =driver.getWindowHandle();
         //       setteki tüm pencereyi al
         List<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
         System.out.println("Window Handles= "+windowHandles);
@@ -51,3 +51,4 @@ public class C05CanHocaDay09Challenge extends TestBase {
     }
 
 }
+
