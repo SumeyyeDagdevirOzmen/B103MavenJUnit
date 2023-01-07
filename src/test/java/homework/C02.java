@@ -20,8 +20,11 @@ public class C02 extends TestBase {
         String actualTitle = driver.getTitle();
         String expectedTitle = "Windows";
         Assert.assertEquals(expectedTitle,actualTitle);
+
         //Click here a tiklayin
+        waitFor(3);
         driver.findElement(By.xpath("//*[text()='Click Here']")).click();
+        waitFor(4);
 
         //Sonra açılan sayfadaki title in ‘New Window’ oldugunu dogrulayin
         Set<String> allWindowHandles = driver.getWindowHandles();//{window1handle , window2Handle}
@@ -32,6 +35,11 @@ public class C02 extends TestBase {
                 break;
             }
         }
+        /*
+         String eachWindow = driver.getWindowHandle();
+        Set<String> allHandles = driver.getWindowHandles();
+        allHandles.stream().filter(t->!t.equals(eachWindow)).limit(1).forEach(t->driver.switchTo().window(t));
+         */
         String actualTitle2=driver.getTitle();
         String expectedTitle2="New Window";
         Assert.assertEquals(expectedTitle2,actualTitle2);
@@ -40,7 +48,7 @@ public class C02 extends TestBase {
         //1.window'a geri dondum
         driver.switchTo().window(window1Handle);
 
-        Thread.sleep(3000);
+
 
 
     }

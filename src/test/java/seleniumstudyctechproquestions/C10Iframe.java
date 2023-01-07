@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
 import java.util.List;
@@ -21,22 +22,25 @@ public class C10Iframe extends TestBase {
     public void test() throws InterruptedException {
         //go to web site : https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/
         driver.get("https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/");
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.ARROW_DOWN).perform();
+
         // ikinci emojiye tıklayın
-        driver.switchTo().frame("emoojis");
+        WebElement iframe=driver.findElement(By.xpath("(//iframe[@id='emoojis'])"));
+        driver.switchTo().frame(iframe);
         driver.findElement(By.xpath("(//span[@class='mdl-tabs__ripple-container mdl-js-ripple-effect'])[2]")).click();
-        Thread.sleep(3000);
+
 
         // ikinci emoji altındaki tüm öğelere tıklayın
 
-        List<WebElement> allEmojies = driver.findElements(By.xpath("//*[@class='mdl-tabs__panel is-active']//img"));
+        List<WebElement> allEmojies = driver.findElements(By.xpath("//*[@id='nature']//img"));
+       for(WebElement element : allEmojies){
+           element.click();
+       }
 
-        for(WebElement element : allEmojies){
-            element.click();
-            break;
-        }
-        Thread.sleep(2000);
 
         // ana iframe'e geri dön
+        waitFor(4);
         driver.switchTo().defaultContent();
 
         //formu doldurun,(Formu istediğiniz metinlerle doldurun)
@@ -69,5 +73,32 @@ public class C10Iframe extends TestBase {
             forum.get(i).sendKeys(inputTexts.get(i));
         }
         driver.findElement(By.id("send")).click();
+    }
+ */
+
+/*
+
+    @Test
+        public void test01() {
+            //go to web site : https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/
+            driver.get("https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/");
+            // ikinci emojiye tıklayın
+//            WebElement iframe= driver.findElement(By.xpath("//iframe[@id='emoojis']"));
+//           driver.switchTo().frame(iframe);
+           driver.switchTo().frame(1);
+           driver.findElement(By.xpath("(//span[@class='mdl-tabs__ripple-container mdl-js-ripple-effect'])[2]")).click();
+            // ikinci emoji altındaki tüm öğelere tıklayın
+            List<WebElement> alleEmoji= driver.findElements(By.xpath("//*[@id='nature']/div/img"));
+            alleEmoji.stream().forEach(t->t.click());
+            // ana iframe'e geri dön
+            driver.switchTo().defaultContent();
+            //formu doldurun,(Formu istediğiniz metinlerle doldurun)
+            List<WebElement> form = driver.findElements(By.xpath("//input[@class='mdl-textfield__input']"));
+            List<String> textler = new ArrayList<>(Arrays.asList("aa","bb","cc","dd","ee","ff","gg","hh","j","k","l"));
+            for(int i=0 ; i<textler.size(); i++){
+                form.get(i).sendKeys(textler.get(i));
+            }
+        // uygula butonuna tıklayın
+            driver.findElement(By.xpath("//button[@id='send']")).click();
     }
  */

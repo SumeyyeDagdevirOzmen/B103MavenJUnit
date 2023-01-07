@@ -19,12 +19,14 @@ public class P02 extends TestBase {
                  WebElement iframe = driver.findElement(By.xpath("//*[@id='emoojis']"));
                  driver.switchTo().frame(iframe);
                  driver.findElement(By.xpath("(//*[@data-upgraded=',MaterialRipple'])[2]")).click();
+
                  // tüm ikinci emoji öğelerini tıklayın
                  List<WebElement> emojiler = driver.findElements(By.xpath("//*[@id='nature']//div/img"));
                  //emojiler.stream().forEach(t->t.click()); // Lambda ile tüm webelementlere tıkladık
                  for (WebElement w:emojiler) {
                      w.click();
                  }
+
                  // parent iframe e geri donun
                  driver.switchTo().defaultContent();
                  //driver.navigate().refresh();

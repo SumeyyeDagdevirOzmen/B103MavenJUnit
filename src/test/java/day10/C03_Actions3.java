@@ -26,12 +26,15 @@ public class C03_Actions3 extends TestBase {
 //        actions.sendKeys(Keys.PAGE_DOWN).perform();
 
         waitFor(3);
-        actions.sendKeys(Keys.PAGE_UP).
-                sendKeys(Keys.PAGE_UP).
-                sendKeys(Keys.PAGE_UP).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).
+                sendKeys(Keys.PAGE_DOWN).
+                sendKeys(Keys.PAGE_DOWN).perform();
+        waitFor(3);
         //ARROW_DOWN PAGE_DOWN dan daha az mesafe aldirir.
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         waitFor(3);
+
+        //Sonra sayfanın üstüne doğru gidelim
         //1.Yukari cik
         actions.sendKeys(Keys.PAGE_UP).perform();
         waitFor(3);
@@ -39,9 +42,10 @@ public class C03_Actions3 extends TestBase {
         actions.sendKeys(Keys.ARROW_UP).perform();
         waitFor(3);
 
-        //Sonra sayfanın üstüne doğru gidelim
 
 
+        //        actions.sendKeys(Keys.ARROW_RIGHT).perform();
+//        actions.sendKeys(Keys.ARROW_LEFT).perform();
 
     }
 }

@@ -30,7 +30,7 @@ public class C01 extends TestBase
 
         // sayfadaki toplam iframe sayısını bulunuz.
         List<WebElement> listOfIframe = driver.findElements(By.xpath("//iframe"));
-        System.out.println("Toplam Size : " + listOfIframe.size());
+        System.out.println("Toplam Iframe Sayisi : " + listOfIframe.size());
 
         // Sayfa basliginda ‘Editor’ yazını içerdiğini test edelim.
         String header = driver.findElement(By.tagName("h3")).getText();
@@ -52,3 +52,4 @@ public class C01 extends TestBase
 
     }
 }
+

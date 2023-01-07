@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
 import java.util.ArrayList;
@@ -28,14 +29,17 @@ public class C13_MarketTask extends TestBase {
         driver.findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])[1]")).click();
 
         //Log the following values for each size .Size information .Price .Color .Stock status
-
-        String renk =  driver.findElement(By.xpath("//span[@id='inline-twister-expanded-dimension-text-color_name']")).getText();
-        String isim=driver.findElement(By.xpath("//*[@id='productTitle']")).getText();
-        String stok = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-success']")).getText();
-        String size=driver.findElement(By.xpath("//div[@id='inline-twister-expander-header-size_name']")).getText();
-
-        System.out.println(renk + " " + isim + " "+stok+" "+ size);
+        String[] productTitle = driver.findElement(By.xpath("//*[@id='title']")).getText().split(" ");
+        WebElement productStok = driver.findElement(By.xpath("//*[.='    Stokta var.   ']"));
+        WebElement productPrice = driver.findElement(By.xpath("//span[@class='a-price-whole']"));
 
         //Isim - Renk - Stok - Boyut - Fiyat
+        System.out.println("URUN ISMI : " + productTitle[1] + " " + productTitle[2] + "\n"+
+                "RENK : " + productTitle[6] + " " + productTitle[7] +"\n"+
+                "STOK DURUMU : " + productStok.getText() +"\n"+
+                "BOYUT : "  + productTitle[3] + " " + productTitle[4] +"\n"+
+                "URUN FIYAT : " + productPrice.getText());
+
+
     }
 }
