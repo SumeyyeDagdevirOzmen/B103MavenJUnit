@@ -9,8 +9,8 @@ import utilities.TestBase;
 import java.util.List;
 import java.util.Set;
 
-public class C01 extends TestBase
-{
+public class C01 extends TestBase {
+
     /*
     Bir class olusturun: IframeOdev
     https://the-internet.herokuapp.com/iframe  sitesine gidiniz
