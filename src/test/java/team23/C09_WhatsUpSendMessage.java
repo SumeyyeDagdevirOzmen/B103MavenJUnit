@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import utilities.TestBase;
 
-public class C09 extends TestBase {
+public class C09_WhatsUpSendMessage extends TestBase {
     @Test
     public void whatshapTest(){
         //rehberinizdeki kayitli isim

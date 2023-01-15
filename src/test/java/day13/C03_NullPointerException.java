@@ -10,7 +10,7 @@ public class C03_NullPointerException  {
     /*
     NullPointerException:
     //Degiskenleri olusturup instantiate(Objede new kelimesini kullanmak) etmedigimizde aliriz.
-    Örn: driver = new ChoromeDriver()'da "new" kelimesini kullanmadığımızda NullPointerException hatasını alırız.
+    Örn: driver = new ChromeDriver()'da "new" kelimesini kullanmadığımızda NullPointerException hatasını alırız.
     Ornegin WebDriver driver; deyip =new ChromeDriver demezsek nullpointerexception aliriz.
     Cozumu: Degiskeni new keleimesini kullanarak bir deger atamaliyiz yani instantiate etmeliyiz.
 
