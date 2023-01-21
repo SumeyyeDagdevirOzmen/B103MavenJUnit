@@ -20,9 +20,9 @@ public class C03_ExtentReports extends TestBase {
         //      REPORT  PATH
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         String path = System.getProperty("user.dir")+"/test-output/reports/"+currentTime+"html_report.html";
-//        creating HTML report in the path
+//        creating HTML report in the path//Sablonu Projeye ekler
         extentHtmlReporter = new ExtentHtmlReporter(path);
-//        creating extent reports object for generating the Entire reports with configuration
+//        creating extent reports object for generating the Entire reports with configuration//Sablonu olusturur
         extentReports = new ExtentReports();
 
         //*************************************RAPORU CUSTOMIZE EDEBILIRIZ*******************************
@@ -57,7 +57,7 @@ public class C03_ExtentReports extends TestBase {
         //TEST BITTI
         extentTest.pass("TEST BASARIYLA GERCEKLESDI");
 
-        //RAPORU GOSTER. RAPORUN OLUSMASI ICIN BU ADIM ZOEUNLUDUR.
+        //RAPORU GOSTER. RAPORUN OLUSMASI ICIN BU ADIM ZORUNLUDUR.
         extentReports.flush();
 
 

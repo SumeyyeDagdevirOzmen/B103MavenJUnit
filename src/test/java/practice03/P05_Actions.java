@@ -17,42 +17,39 @@ public class P05_Actions extends TestBase {
      */
 
     @Test
-    public void test01() {
+    public void test01() throws InterruptedException {
 
+        // - http://szimek.github.io/signature_pad/ sayfasına gidiniz
         driver.get("http://szimek.github.io/signature_pad/");
-        WebElement canvas = driver.findElement(By.xpath("//*[@class='signature-pad--body']"));
+        WebElement canvas = driver.findElement(By.xpath("//canvas"));
         Actions actions = new Actions(driver);
-        // move to starting point of name
-        actions.moveToElement(canvas, 100, 100);
-        // Press the left mouse button and move the mouse to draw the letter 'h'
-        actions.clickAndHold().moveByOffset(0, 50).moveByOffset(50, 0).moveByOffset(0, -50).moveByOffset(-50, 0).release().perform();
+        actions.moveToElement(canvas).clickAndHold();
+        for (int i = 0; i < 20 ; i++) {
+            actions.moveByOffset(-5,-5);
+        }
+        for (int i = 0; i < 20 ; i++) {
+            actions.moveByOffset(0,5);
+        }
+        for (int i = 0; i < 20 ; i++) {
+            actions.moveByOffset(5, 0);
+        }
 
-        //move to next letter position
-        actions.moveByOffset(60, 0);
-        // Press the left mouse button and move the mouse to draw the letter 'u'
-        actions.clickAndHold().moveByOffset(0, 50).moveByOffset(50, 0).moveByOffset(0, -50).moveByOffset(-50, -50).moveByOffset(0, 50).release().perform();
+        actions.release().build().perform();
 
-        // move to next letter position
-        actions.moveByOffset(60, 0);
-        // Press the left mouse button and move the mouse to draw the letter 's'
-        actions.moveByOffset(0, 50).moveByOffset(50, -50).moveByOffset(0, 50).moveByOffset(-50, -50).moveByOffset(0, 50).perform();
-        actions.moveByOffset(60, 0);
-        // Press the left mouse button and move the mouse to draw the letter 'e'
-        actions.clickAndHold().moveByOffset(0, -50).moveByOffset(50, 50).moveByOffset(0, -50).moveByOffset(-50, 0).release().perform();
-        actions.moveByOffset(60, 0);
-        // Press the left mouse button and move the mouse to draw the letter 'y'
-        actions.clickAndHold().moveByOffset(50, -50).moveByOffset(-50, 50).release().perform();
-        actions.moveByOffset(60, 0);
-        // Press the left mouse button and move the mouse to draw the letter 'i'
-        actions.clickAndHold().moveByOffset(25, -25).moveByOffset(-25, 25).moveByOffset(25, -25).release().perform();
-        actions.moveByOffset(60, 0);
-        // Press the left mouse button and move the mouse to draw the letter 'n'
-        actions.clickAndHold().moveByOffset(0, -50).moveByOffset(50, 0).moveByOffset(0, 50).moveByOffset(-50, 0).release().perform();
+        //    - Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
+        //    -Cizimden sonra clear butonuna basalim
 
-        // Locate the clear button
-        //  WebElement clearBtn = driver.findElement(By.cssSelector("a.btn.clear"));
-        // Click the clear button
-        //  clearBtn.click();
+
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//*[text()='Clear']")).click();
+
+        //    - Son olarak sayfayı temizleyiniz
+
+
+
+
+
+
 
     }
 

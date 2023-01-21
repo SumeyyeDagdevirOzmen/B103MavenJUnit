@@ -3,16 +3,14 @@ package day14;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.*;
 import utilities.TestBase;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class C01_ScreenShot1 extends TestBase {
     //Class : screenShot1
@@ -30,11 +28,12 @@ public class C01_ScreenShot1 extends TestBase {
         //Techpro education a git ve Sayfanin goruntusunu al
         driver.get("https://www.techproeducation.com");
         // 1. Ekran goruntusunu getScreenShotAs metotu ile alip File olarak olusturalim.
+
         File goruntu = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         // 2. Almis oldugum ekran goruntusunu belirledigim bir path'e kaydet. dir=directory=dosya
         //NOTE: Kayit ismini dinamik yapmak icin date objesini kullandim
-        String currentDate = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());//Halihazirdaki yil-ay-gun-saat-dakika-saniye
+        String currentDate = new SimpleDateFormat("yyyy-MM-dd.hh.mm.ss").format(new Date());//Halihazirdaki yil-ay-gun-saat-dakika-saniye
         String path = System.getProperty("user.dir") + "\\test-output\\EkranGoruntuleri\\"+currentDate+"image.png";
         File hedef = new File(path);
 
@@ -54,8 +53,10 @@ public class C01_ScreenShot1 extends TestBase {
         String expected = "Search Results for: QA";
         String text = driver.findElement(By.xpath("//*[contains(text(),'Search Results for')]")).getText();
         Assert.assertTrue(expected.contains(text));
+//
 //        'REUSABLE METHOD'  yardimiyla ekran goruntusunu alalim
         takeScreenShotOfPage();
+
 
     }
 }

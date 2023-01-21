@@ -1,5 +1,7 @@
 package day15;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -20,15 +22,20 @@ public class C02_WebTables extends TestBase {
     //printData(2,3);  => 2nd row, 3rd column daki datayı print etsin
 
 
+    private static Logger logger = LogManager.getLogger(C02_WebTables.class.getName());
+
     @Test
     public void table1Print() {
 
         //https://the-internet.herokuapp.com/tables
         driver.get("https://the-internet.herokuapp.com/tables");
         //Task 1 : Table1’i print edin
+        //1.yol:Tum verileri alir
         String table1 = driver.findElement(By.xpath("//table[@id='table1']")).getText();
-        System.out.println("Table 1 Verileri");
+    //    System.out.println("Table 1 Verileri");
+        logger.info("TABLE 1 VERILERI");
         System.out.println("table1  = " + table1);
+        //2. Butun verileri tek tek alir
         List<WebElement> tumVeriler = driver.findElements(By.xpath("//table[@id='table1']//td"));
         //tumVeriler.forEach(t-> System.out.println(t.getText()));
         for (WebElement veri : tumVeriler) {
@@ -72,9 +79,29 @@ public class C02_WebTables extends TestBase {
         System.out.println(driver.findElement(By.xpath(myXpath)).getText());
     }
 
+    public void printData(int satir, int sutun,String tagName) {
+
+        driver.get("https://the-internet.herokuapp.com/tables");
+        String myXpath ="//"+tagName+"//tbody//tr["+satir+"]//td["+sutun+"]";
+        System.out.println(driver.findElement(By.xpath(myXpath)).getText());
+    }
+
     @Test
     public void printDataSet() {
         printData(2,3);//fbach@yahoo.com
+        printData(2,3,"table");//fbach@yahoo.com
+        printData(1,2);//John
+    }
+
+    @Test
+    public void headersTest() {
+        driver.get("https://the-internet.herokuapp.com/tables");
+        List<WebElement> headerList= driver.findElements(By.xpath("//table[@id='table1']//thead"));
+        headerList.forEach(t-> System.out.println(t.getText()));
+
+
+
+
     }
 
     /*
