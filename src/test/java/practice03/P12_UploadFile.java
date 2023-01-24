@@ -18,13 +18,9 @@ public class P12_UploadFile extends TestBase {
     public void test12() throws InterruptedException {
         //https://demo.guru99.com/test/upload/ adresine gidiniz
         driver.get("https://demo.guru99.com/test/upload/");
-        /*
-        WebElement ifrane = driver.findElement(By.xpath("//*[@class='faktor-iframe-wrapper']"));
-driver.switchTo().frame(ifrane);
-driver.findElement(By.xpath("//*[text()='Accept All']")).click();
-driver.switchTo().defaultContent();
-         */
-        driver.switchTo().frame(driver.findElement(By.id("gdpr-consent-notice")));
+
+        WebElement iframe=driver.findElement(By.id("gdpr-consent-notice"));
+        driver.switchTo().frame(iframe);
         Thread.sleep(3000);
         driver.findElement(By.xpath("//span[text()='Accept All']")).click();
 
@@ -48,10 +44,6 @@ driver.switchTo().defaultContent();
         assert driver.findElement(By.xpath("//*[@id='res']")).isDisplayed();
 
 
-        // I accept terms of service bölümünü tiklayin
 
-        // Submit File buttonuna basınız
-
-        // "1 file has been successfully uploaded" görünür olduğunu test edin
     }
 }

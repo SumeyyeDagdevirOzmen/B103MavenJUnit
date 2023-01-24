@@ -8,7 +8,7 @@ import utilities.TestBase;
 
 import java.util.List;
 
-public class P03_Practice extends TestBase {
+public class P03_Practice_StaleElement extends TestBase {
     //Amazon sayfasina gidelim
     //iphone aratalim
     //Cikan urunlerde sadece Apple iphone yazanlari tiklayalim

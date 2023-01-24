@@ -15,7 +15,7 @@ public class P01_Exceptions {
     ElementNotVisibleException hatası verir. Bu hatayı önlemek için bekleme komutları eklenir.
     En ideali implicitly wait'dir.
     TIME_OUT_EXCEPTION:
-        Sayfada aradığımız elementi wait ile belirttiğimiz max. sürede, bulamadığı durumda
+        Sayfada aradığımız elementi wait ile belirttiğimiz m ax. sürede, bulamadığı durumda
     selenium.TimeoutException fırlatacaktır.
     NULL_POINTER_EXCEPTION :
     Değişken oluşturup bu değişkene atama yapmadığımızda yada eşitlemediğimizde bu hatayı alırız.

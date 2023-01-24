@@ -1,5 +1,8 @@
 package utilities;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
@@ -27,7 +30,19 @@ public abstract class TestBase {
     //driver objesini olustur.Driver ya public ya da protected olmali .
     // Sebebi child classlarda kullanilabilmesi icin.
     // Sebepi child classlarda gorulebilir olmasi
+
     protected static WebDriver driver;
+
+    /*
+    1. <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->pom.xml'e yuklemek
+    2. Eger extentReport almak istersek ilk yapmamiz gereken ExtentReport class'indan bir obje olusturmak
+    3. HTML formatinda duzenlenecegi icin ExtentHtmlReporter Class'indan obje olusturmak
+     */
+
+    protected ExtentReports extentReports;//Raporlamayi baslatiriz
+    protected ExtentHtmlReporter extentHtmlReporter;//Raporumu HTML formatinda duzenler
+    protected ExtentTest extentTest;//Test asamalarina extentTest objesi ile bilgi ekleriz
+
 
     // setUp
     @Before
@@ -37,6 +52,19 @@ public abstract class TestBase {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //-------------------------------------------------------------------------------------------------
+        extentReports=new ExtentReports();
+        String  date = new SimpleDateFormat("hh_mm_ss_ddMMyyyy").format(new Date());
+        String filePath = "target/ExtentReports/htmlreport"+date+".html";//Dosya yolu olarak kaydettim
+        extentHtmlReporter=new ExtentHtmlReporter(filePath);
+        extentReports.attachReporter(extentHtmlReporter);
+        //Raporda gozukmesini istedigimiz bilgiler icin
+        extentReports.setSystemInfo("Browser","Chrome");
+        extentReports.setSystemInfo("Tester","Sumeyye");
+        extentHtmlReporter.config().setDocumentTitle("Extent Report");
+        extentHtmlReporter.config().setReportName("Test Result");
+
+
 
     }
 
@@ -44,7 +72,8 @@ public abstract class TestBase {
     @After
     public void tearDown() {
         waitFor(5);
-        // driver.quit();
+         //driver.quit();
+        extentReports.flush();
     }
 
     //    MULTIPLE WINDOW
